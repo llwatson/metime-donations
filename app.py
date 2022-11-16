@@ -39,7 +39,6 @@ def add_amount():
 
     db.session.add(new_amount)
     db.session.commit()
-
     damount = Amount.query.get(new_amount.id)
 
     return amount_schema.jsonify(damount)
